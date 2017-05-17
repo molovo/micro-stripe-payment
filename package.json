@@ -1,0 +1,26 @@
+{
+  "name": "vixen-payment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "micro": "^7.3.3",
+    "stripe": "^4.19.0"
+  },
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "nyc": "^10.3.2",
+    "request-promise": "^4.2.1",
+    "test-listen": "^1.0.2",
+    "xo": "^0.18.2"
+  },
+  "scripts": {
+    "start": "micro",
+    "test": "xo && nyc ava"
+  },
+  "xo": {
+    "space": 2,
+    "semicolon": false
+  }
+}
