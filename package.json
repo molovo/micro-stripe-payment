@@ -19,7 +19,8 @@
   },
   "scripts": {
     "start": "micro",
-    "test": "xo && nyc ava --verbose"
+    "test": "xo && nyc ava --verbose",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "xo": {
     "space": 2,

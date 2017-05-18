@@ -5,7 +5,7 @@ before_script:
   - echo "STRIPE_SECRET_KEY=$STRIPE_SECRET_KEY" >> .env
   - echo "STRIPE_ALLOW_DOMAIN=$STRIPE_ALLOW_DOMAIN" >> .env
 
-script: xo && nyc ava --verbose && nyc report --reporter=text-lcov | coveralls
+script: npm test && npm coverage
 
 env:
   global:
