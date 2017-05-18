@@ -6,10 +6,12 @@
   "dependencies": {
     "dotenv": "^4.0.0",
     "micro": "^7.3.3",
+    "request-promise-core": "^1.1.1",
     "stripe": "^4.19.0"
   },
   "devDependencies": {
     "ava": "^0.19.1",
+    "coveralls": "^2.13.1",
     "nyc": "^10.3.2",
     "request-promise": "^4.2.1",
     "test-listen": "^1.0.2",
@@ -17,7 +19,7 @@
   },
   "scripts": {
     "start": "micro",
-    "test": "xo && nyc ava"
+    "test": "xo && nyc ava --verbose"
   },
   "xo": {
     "space": 2,

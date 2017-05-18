@@ -1,0 +1,7 @@
+language: node_js
+script: xo && nyc ava --verbose && nyc report --reporter=text-lcov | coveralls
+env:
+  global:
+    secure: OPK1RKC9xSXUSLur3O7a+LY8/MnctQeo2+3p8TiOrA1JprO9afIfpUpNbCap2MYxCG/lekmU0vQ2QHC3d2lSNdoAsjbK+3xcms6R7NHrP7N/W2ocxMdXdr0LBkrhsjVkF/kxcu61O9L2jMGsLMpna0yUv3fc+jYD5yAmdsCT7kbUPo5nxAggCQnPWB5E4MBOn0XZBT1CWHCm0sJ5NNjPsXvqpW35gQaypYqMUOjPaJu8v69cpnHOjosfJs6VeN+Ppbcmudwt2LPjDijW1jhZPGwQW8JMgzWUfwVYyJldl3Ht+tWPVmrU6PG7fgYyHJjTwjNOcEeGxGEuvGfroYSBT9E/1k7VuReoFdZ+NGO0Dx62NXEa99ttWqQjje7avnDwgW0pXkkFuhaAHxTKoWh6wiJNOvNfV+nPLRic6kskvjJGzG/GdU9j80FyLCMZf+sUWDSHsUnHHxmMWGgzVtEuT1EJUEHvykHS67tuqD6QTDdBBok++nM79GO0b+YWip/Vu2U25wJ0io9ooqudkQT9G13D48dX37WIKTeMWjLGtzpPgvfMZYaxGbil/aqlHv6G84UoePsmqZXUXjAGmOGrl6DwPezuQhycHC2+Uj22bQO0OW3eSjWkSW+t95i/WW00c2cKWqBw2TcMMQUHPTXi2NzDJ1lwpAKXG2xKUGG23T8=
+notifications:
+  email: false

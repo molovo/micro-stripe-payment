@@ -30,12 +30,12 @@ module.exports = class StripePaymentHandler {
         // Create the charge
         stripe.charges.create(data, error => {
           if (error) {
-            send(this.response, 400, {
+            return send(this.response, 400, {
               error: this.error(error)
             })
           }
 
-          send(this.response, 200, {
+          return send(this.response, 200, {
             message: 'Payment Successful'
           })
         })
