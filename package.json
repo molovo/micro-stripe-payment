@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "ava": "^0.19.1",
-    "codacy-coverage": "^2.0.2",
+    "codeclimate-test-reporter": "^0.4.1",
     "nyc": "^10.3.2",
     "request-promise": "^4.2.1",
     "request-promise-core": "^1.1.1",
@@ -19,8 +19,9 @@
   },
   "scripts": {
     "start": "micro",
-    "test": "xo && nyc ava --verbose",
-    "coverage": "nyc report --reporter=lcov && cat coverage/lcov.info | codacy-coverage"
+    "lint": "xo",
+    "test": "nyc ava --verbose",
+    "coverage": "nyc report --reporter=lcov && codeclimate-test-reporter < coverage/lcov.info"
   },
   "xo": {
     "space": 2,
