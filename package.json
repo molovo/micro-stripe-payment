@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "ava": "^0.19.1",
-    "coveralls": "^2.13.1",
+    "codacy-coverage": "^2.0.2",
     "nyc": "^10.3.2",
     "request-promise": "^4.2.1",
     "request-promise-core": "^1.1.1",
@@ -20,7 +20,7 @@
   "scripts": {
     "start": "micro",
     "test": "xo && nyc ava --verbose",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc report --reporter=lcov && cat coverage/lcov.info | codacy-coverage"
   },
   "xo": {
     "space": 2,
