@@ -22,6 +22,25 @@ test('GET request returns status message', async t => {
 })
 
 /**
+ * Test that a HEAD request returns no body,
+ * without doing any payment processing
+ *
+ * @param  {Test} t
+ */
+test('HEAD request returns no body', async t => {
+  const url = await listen(service)
+  const response = await request({
+    uri: url,
+    method: 'HEAD',
+    json: true,
+    resolveWithFullResponse: true
+  })
+
+  t.is(response.statusCode, 204)
+  t.is(typeof response.body, 'undefined')
+})
+
+/**
  * Test that a OPTIONS request returns an empty object,
  * without doing any payment processing
  *
@@ -31,10 +50,11 @@ test('OPTIONS request returns empty object', async t => {
   const url = await listen(service)
   const body = await request({
     uri: url,
-    method: 'OPTIONS'
+    method: 'OPTIONS',
+    json: true
   })
 
-  t.deepEqual(JSON.parse(body), {})
+  t.deepEqual(body, {})
 })
 
 /**

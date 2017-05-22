@@ -23,6 +23,11 @@ module.exports = async (request, response) => {
 
   // Choose a response based on the request method
   switch (method) {
+    // HEAD requests should return no body
+    case 'HEAD': {
+      return null
+    }
+
     // OPTIONS requests are used for access control
     case 'OPTIONS': {
       return {}
