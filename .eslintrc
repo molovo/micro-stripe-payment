@@ -10,6 +10,7 @@
   ],
   "extends": [
     "plugin:xo/recommended",
-    "plugin:unicorn/recommended"
+    "plugin:unicorn/recommended",
+    "standard"
   ]
 }
