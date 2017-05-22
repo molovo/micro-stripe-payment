@@ -1,0 +1,15 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "standard",
+    "unicorn",
+    "xo"
+  ],
+  "extends": [
+    "plugin:xo/recommended",
+    "plugin:unicorn/recommended"
+  ]
+}

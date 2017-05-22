@@ -15,7 +15,7 @@ module.exports = class StripePaymentHandler {
    *
    * @return {self}
    */
-  constructor(request, response) {
+  constructor (request, response) {
     this.request = request
     this.response = response
   }
@@ -23,7 +23,7 @@ module.exports = class StripePaymentHandler {
   /**
    * Create a charge via the Stripe API
    */
-  charge() {
+  charge () {
     // Decode the JSON request data
     json(this.request)
       .then(data => {
@@ -50,7 +50,7 @@ module.exports = class StripePaymentHandler {
    *
    * @return {string}
    */
-  error(error) {
+  error (error) {
     switch (error.type) {
       case 'StripeCardError': {
         // A declined card error
