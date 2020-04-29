@@ -6,7 +6,7 @@
   "dependencies": {
     "dotenv": "^4.0.0",
     "micro": "^7.3.3",
-    "stripe": "^4.19.0"
+    "stripe": "^8.47.1"
   },
   "devDependencies": {
     "ava": "^0.19.1",
